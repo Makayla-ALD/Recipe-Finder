@@ -1,6 +1,3 @@
-const SEARCH_API_URL = "https://themealdb.com/api/json/v1/1/search.php?s=";
-const RANDOM_API_URL = "http://themealdb.com/api/json/v1/1/random.php";
-const LOOKUP_API_URL = "http://themealdb.com/api/json/v1/1/lookup.php?i=";
 
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
