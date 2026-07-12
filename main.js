@@ -1,3 +1,6 @@
+const SEARCH_API_URL = "https://themealdb.com/api/json/v1/1/search.php?s=";
+const RANDOM_API_URL = "http://themealdb.com/api/json/v1/1/random.php";
+const LOOKUP_API_URL = "http://themealdb.com/api/json/v1/1/lookup.php?i=";
 
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
@@ -126,6 +129,7 @@ async function getRecipeDetails(id) {
         if (!response.ok) throw new Error("Failed to fetch recipe details.");
         const data = await response.json();
 
+        console.log("details: ", data);
         if (data.meals && data.meals.length > 0) {
             displayRecipeDetails(data.meals[0]);
         }
