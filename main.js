@@ -125,7 +125,7 @@ async function getRecipeDetails(id) {
     showModal();
 
     try {
-        const response = await fetch(`${LOOKUP_API_URL}${id}`);
+        const response = await fetch(`http://themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
         if (!response.ok) throw new Error("Failed to fetch recipe details.");
         const data = await response.json();
 
